@@ -21,14 +21,11 @@ public class UsersController : ControllerBase
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
         return await _context.Users.ToListAsync();
-
     }
 
     [HttpGet("{id}")] // Endpint /api/controlller
     public async Task<ActionResult<AppUser>> GetUser(int id)
     {
-
         return await _context.Users.FindAsync(id);
-
     }
 }
